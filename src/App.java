@@ -10,17 +10,16 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        File arquivo = new File("load\\save.txt");
+        File arquivo = new File("src\\save.txt");
         if (!arquivo.exists()) {
             arquivo.createNewFile();
         }
-
         exibeMenu();
     }
 
     public static String lerTarefas() throws IOException {
 
-        Path caminho = Paths.get("load\\save.txt");
+        Path caminho = Paths.get("src\\save.txt");
         List<String> lst = Files.readAllLines(caminho, StandardCharsets.UTF_8);
         StringBuilder sb = new StringBuilder();
         int count = 1;
@@ -39,14 +38,14 @@ public class App {
 
     public static List<String> lerTarefasAdicionar() throws IOException {
 
-        Path caminho = Paths.get("load\\save.txt");
+        Path caminho = Paths.get("src\\save.txt");
         List<String> lst = Files.readAllLines(caminho, StandardCharsets.UTF_8);
         return lst;
     }
 
     public static List<String> lerTarefasConclusao() throws IOException {
 
-        Path caminho = Paths.get("load\\save.txt");
+        Path caminho = Paths.get("src\\save.txt");
         List<String> lst = Files.readAllLines(caminho, StandardCharsets.UTF_8);
 
         return lst;
@@ -101,7 +100,7 @@ public class App {
             case 4:
                 System.exit(0);
             default:
-            exibeMenu();
+                exibeMenu();
 
         }
     }
@@ -111,7 +110,7 @@ public class App {
         List<String> tarefaSalva = lerTarefasAdicionar();
         tarefaSalva.add(tarefa);
         StringBuilder sb = new StringBuilder();
-        FileWriter writer = new FileWriter("load\\save.txt");
+        FileWriter writer = new FileWriter("src\\save.txt");
 
         for (String string : tarefaSalva) {
             sb.append(string + "\n");
@@ -138,7 +137,7 @@ public class App {
             System.out.println("Digite uma opção válida");
         }
 
-        FileWriter writer = new FileWriter("load\\save.txt");
+        FileWriter writer = new FileWriter("src\\save.txt");
         listaTarefas.remove((resposta - 1));
 
         for (String string : listaTarefas) {
