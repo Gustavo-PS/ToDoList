@@ -101,6 +101,7 @@ public class App {
             case 4:
                 System.exit(0);
             default:
+            exibeMenu();
 
         }
     }
