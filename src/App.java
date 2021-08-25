@@ -58,7 +58,7 @@ public class App {
     public static void exibeMenu() throws InterruptedException, IOException {
         limparTela();
         System.out.println("Bem-vindo ao To Do List");
-        System.out.println("1 - Verificar tarefas \n2 - Adicionar Tarefa \n3- Concluir Tarefa \n4 - Sair");
+        System.out.println("------------------------\n|1 - Verificar tarefas |\n|2 - Adicionar Tarefa  |\n|3 - Concluir Tarefa   | \n|4 - Sair              |\n------------------------");
 
         int respostaMenu = 0;
 
